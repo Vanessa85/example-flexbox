@@ -4,7 +4,7 @@
 
 Flexbox is a new layout mode in CSS3.
 
-**This example use: **
+**This example use:**
 
 - [Less CSS Preprocessor](http://lesscss.org/)
 - [Font Awesome](http://fontawesome.io/?utm_source=hackernewsletter)
