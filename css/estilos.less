@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+  font-size: 13px;
+  padding-top: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#flex() {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  background: #F27A5E;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  #flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index: 1030;
+
+  .author {
+    img {
+      width: 64px;
+      vertical-align: top;
+    }
+    h2 {
+      font-size: 16px;
+      display: inline-block;
+      line-height: 64px;
+      padding-left: 15px;
+      width: auto;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  nav {
+    #flex;
+    width: 50%;
+
+    a {
+      font-size: 15px;
+      font-weight: bold;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      flex-grow: 1;
+
+      i {
+        padding-right: 5px;
+      }
+
+      &:hover {
+        background: #DC4223;
+      }
+    }
+  }
+
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+section#main {
+    flex:1;
+    border: 1px solid #ff000;
+    margin-right: 15px;
+    background: #F2DE79;
+}
+
+aside#sidebar {
+  flex: 0 0 350px;
+
+  h2 {
+    background: #BBBBBD;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color:#fff;
+  }
+}
+
+ul.posts {
+  background: #F4F4F4;
+  padding: 10px 20px;
+  list-style: none;
+
+  li {
+    border-bottom: 1px solid #DBDBDB;
+    padding: 20px 0;
+
+    img {
+      width: 50px;
+      float:left;
+    }
+    .description {
+      margin-left: 75px;
+      h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+        color: #000;
+      }
+    }
+    &:last-child {
+      border:0;
+    }
+
+    .date {
+      font-weight: bold;
+      margin-top: 5px;
+      font-style: italic;
+    }
+  }
+
+}
+
+footer {
+  padding-top: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width:800px) {
+  body {
+    padding-top: 137px;
+  }
+  .container {
+    flex-direction: column;
+
+    section#main {
+      margin:0;
+    }
+  }
+
+  header {
+    flex-direction: column;
+    padding: 0;
+
+    .author {
+      margin: 20px 0;
+    }
+
+    nav {
+      width: 100%;
+    }
+  }
+
+  section#main {
+    margin:0;
+    margin-bottom: 10px;
+  }
+
+  aside {
+    flex:0;
+  }
+}
+@media screen and (max-width:390px) {
+  header {
+
+    .author h2 {
+      width: 200px;
+    }
+  }
+}
